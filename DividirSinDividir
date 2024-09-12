@@ -1,0 +1,24 @@
+def dividir(numerador, divisor):
+
+    if numerador <  divisor:
+        return 0
+    else:
+        return 1 + dividir(numerador-divisor, divisor)    
+
+def main():
+    
+    numerador = int(input('Ingrese el numerador: '))
+    divisor = int(input('Ingrese el divisor: '))
+    
+    if numerador < divisor:
+        print('El divisor no puede ser mayor al numerador')
+    elif divisor == 0:
+        print('El divisor no puede ser cero')
+    else:
+        
+        resultado = dividir(numerador, divisor)
+    
+        print(f'\nEl numero {numerador} dividido {divisor} es: {resultado}')
+
+if __name__=='__main__':
+    main()
