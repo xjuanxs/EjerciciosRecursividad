@@ -1,0 +1,18 @@
+def multiplicar(a, b):
+    # Caso base: si uno de los números es 0, el resultado es 0
+    if b == 0:
+        return 0
+    elif b > 0:
+        # Llamada recursiva: sumar 'a' 'b' veces
+        return a + multiplicar(a, b - 1)
+    else:
+        # Si 'b' es negativo, sumar el negativo de 'a' 'abs(b)' veces
+        return -multiplicar(a, -b)
+
+# Solicitar los números al usuario
+a = int(input("Introduce el primer número: "))
+b = int(input("Introduce el segundo número: "))
+
+# Realizar la multiplicación y mostrar el resultado
+resultado = multiplicar(a, b)
+print(f"El resultado es: {resultado}")
